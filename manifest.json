@@ -1,30 +1,29 @@
 {
-  "manifest_version": 2,
-  "name": "Your Chrome Extension Name",
-  "version": "0.1",
-  "author": "First Last",
-  "description": "A description about your Chrome Extension...",
-  "permissions": [
-    ""
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
+    "manifest_version": 2,
+    "name": "CookBook",
+    "version": "0.1",
+    "author": "Shelby Joyner",
+    "description": "Your personal cookbook assistant",
+    "permissions": [
+      ""
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": [
+          "content.js"
+        ]
+      }
+    ],
+    "background": {
+      "scripts": [
+        "background.js"
       ]
+    },
+    "browser_action": {
+      "default_popup": "frontend/public/index.html",
+      "default_title": "Your personal cookbook assistant"
     }
-  ],
-  "background": {
-    "scripts": [
-      "background.js"
-    ]
-  },
-  "browser_action": {
-    "default_icon": "logo.png",
-    "default_popup": "index.html",
-    "default_title": "A tooltip popup description when you hover over the Chrome Extension icon."
   }
-}
